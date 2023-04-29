@@ -1,8 +1,6 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
 from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters, CallbackQueryHandler
-import os
 
-TOKEN=os.environ.get("TOKEN")
 def start(update: Update, context: CallbackContext) -> None:
     bot = context.bot
     chat_id = update.message.chat.id
@@ -60,12 +58,3 @@ def menu(update: Update, context: CallbackContext):
     
 
 
-
-
-updater = Updater(token=TOKEN)
-dp = updater.dispatcher
-dp.add_handler(CommandHandler("start", start))
-# dp.add_handler(MessageHandler(Filters.text, text))
-dp.add_handler(CallbackQueryHandler(menu))
-updater.start_polling()
-updater.idle()
