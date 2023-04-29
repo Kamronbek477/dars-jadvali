@@ -1,7 +1,7 @@
 import requests
 import os
 
-url = 'https://rystam.pythonanywhere.com/webhook'
+url = 'https://darsjadval121212.pythonanywhere.com/webhook'
 
 Token = '6198972222:AAFMAYd6f3bJFSh-1FA6ZnqdZTtAIRhbjyE'
 
